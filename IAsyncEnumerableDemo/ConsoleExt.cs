@@ -11,9 +11,9 @@ namespace IAsyncEnumerableDemo
       Console.WriteLine($"(Time: {DateTime.Now.ToShortTimeString()},  Thread {Thread.CurrentThread.ManagedThreadId}): {message} ");
     }
 
-    public static async void WriteLineAsync(object data)
+    public static async void WriteLineAsync(object message)
     {
-      await Task.Run(() => Console.WriteLine($"(Time: {DateTime.Now.ToShortTimeString()},  Thread {Thread.CurrentThread.ManagedThreadId}): {data} "));
+      await Task.Run(() => Console.WriteLine($"(Time: {DateTime.Now.ToShortTimeString()},  Thread {Thread.CurrentThread.ManagedThreadId}): {message} "));
     }
   }
 }
